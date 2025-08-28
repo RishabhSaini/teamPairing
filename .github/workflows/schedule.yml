@@ -1,0 +1,30 @@
+name: Generate Weekly 1-on-1s
+
+on:
+  schedule:
+    - cron: '0 9 * * 5'  # Every Monday at 09:00 UTC
+  workflow_dispatch:     # Allow manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run pairing script
+        run: python team_pairing.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.md
+          git commit -m "🤖 Update weekly team pairings"
+          git push
