@@ -1,8 +1,8 @@
 # Weekly 1-on-1 Pairs
-📅 **Week of 2026-10-09**
+📅 **Week of 2026-10-16**
 
-- Jerry 🤝 Urvashi
-- Prachiti 🤝 Sergio
-- Rishabh 🤝 Dalia
-- Zack 🤝 Isabella
-- David 🤝 Pablo
+- Sergio 🤝 Isabella
+- Dalia 🤝 Urvashi
+- Pablo 🤝 David
+- Zack 🤝 Rishabh
+- Prachiti 🤝 Jerry
